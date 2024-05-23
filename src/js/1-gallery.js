@@ -87,17 +87,6 @@ const imageGallery = images
 
 gallery.insertAdjacentHTML("beforeend", imageGallery);
 
-gallery.addEventListener("click", (event) => {
-    event.preventDefault();
- 
-    const isImageLink = event.target.closest('.gallery-link');
-    if (!isImageLink) return;
-  
-    const largeImageUrl = isImageLink.getAttribute('href');
-    console.log('Image URL:', largeImageUrl);
-
-});
-
 const lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionDelay: 250,
